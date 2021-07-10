@@ -5,7 +5,14 @@ const Input = (props) => {
   return (
     <label className="h3">
       {label}:
-      <input label={label} name={name} type={type} value={undefined} placeholder={placeholder} onChange={handleChange} style={{marginTop: '6px'}} />
+      <input 
+        label={label} 
+        name={name} 
+        type={type} 
+        value={undefined} 
+        placeholder={placeholder} 
+        onChange={handleChange} 
+        style={{marginTop: '6px'}} />
     </label>
   );
 }

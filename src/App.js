@@ -11,7 +11,7 @@ const App = () => {
   function handleChange(e) {
     let name = e.target.name;
     let value = e.target.value.trim();
-    console.log(name);
+
     switch(name) {
       case 'name':
         setName(value);
@@ -31,7 +31,7 @@ const App = () => {
   }
 
   function checkName() {
-    if (!name) return false ;
+    if (!name) return false;
     const englishAplphabet = /^[a-zA-Z]+$/;
     let nameLength = name.length;
     if ((nameLength >= 3 && nameLength <= 30) && (englishAplphabet.test(name.replace(/ /g, "")))) {
@@ -83,7 +83,7 @@ const App = () => {
   }
 
   return (
-    <div className="App" style={{width: '600px',   margin: '20px auto'}}>
+    <div style={{width: '600px',   margin: '20px auto'}}>
       <h1 className="text-center" style={{marginBottom: '60px'}}>Form Validation</h1>
       <div>
         <div>
@@ -113,10 +113,17 @@ const App = () => {
               placeholder={'Enter your Blog URL'}
               handleChange={handleChange} />
             <div className="text-center">
-              <button type="submit" className="success button large" style={{marginTop: '20px'}}>Verify</button>
+              <button 
+                type="submit" 
+                className="success button large" 
+                style={{marginTop: '20px'}}>
+                Verify
+              </button>
             </div>
           </form>
-          <div className="h3 text-center">{!validated ? 'Form is Incomplete!' : 'Form is Complete!'}</div>
+          <div className="h3 text-center">
+            {!validated ? 'Form is Incomplete!' : 'Form is Complete!'}
+          </div>
         </div>
       </div>
     </div>
