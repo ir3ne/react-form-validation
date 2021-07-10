@@ -1,6 +1,6 @@
 # React form validation
 
-<!-- Demo here [demo](https://github.com/facebook/create-react-app). -->
+Live demo [here](https://react-form-validation-with-hooks.netlify.app/).
 <!-- 
 ## Available Scripts
 
